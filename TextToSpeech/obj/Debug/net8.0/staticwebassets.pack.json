@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\DEV\\HobbyProjects\\TextToSpeech\\TextToSpeech\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\TextToSpeech.bundle.scp.css",
+      "PackagePath": "staticwebassets\\TextToSpeech.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\DEV\\HobbyProjects\\TextToSpeech\\TextToSpeech\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "C:\\DEV\\HobbyProjects\\TextToSpeech\\TextToSpeech\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\DEV\\HobbyProjects\\TextToSpeech\\TextToSpeech\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\DEV\\HobbyProjects\\TextToSpeech\\TextToSpeech\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.TextToSpeech.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.TextToSpeech.props",
+      "PackagePath": "build\\TextToSpeech.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.TextToSpeech.props",
+      "PackagePath": "buildMultiTargeting\\TextToSpeech.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.TextToSpeech.props",
+      "PackagePath": "buildTransitive\\TextToSpeech.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

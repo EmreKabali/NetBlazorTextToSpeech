@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "nyYbe5T6S4Q=",
+  "success": true,
+  "projectFilePath": "C:\\DEV\\HobbyProjects\\TextToSpeech\\TextToSpeech\\TextToSpeech.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\KEA8CKY\\.nuget\\packages\\openai\\2.0.0\\openai.2.0.0.nupkg.sha512",
+    "C:\\Users\\KEA8CKY\\.nuget\\packages\\system.clientmodel\\1.1.0\\system.clientmodel.1.1.0.nupkg.sha512",
+    "C:\\Users\\KEA8CKY\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.1\\system.diagnostics.diagnosticsource.6.0.1.nupkg.sha512",
+    "C:\\Users\\KEA8CKY\\.nuget\\packages\\system.memory.data\\1.0.2\\system.memory.data.1.0.2.nupkg.sha512",
+    "C:\\Users\\KEA8CKY\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\KEA8CKY\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
+    "C:\\Users\\KEA8CKY\\.nuget\\packages\\system.text.json\\6.0.9\\system.text.json.6.0.9.nupkg.sha512"
+  ],
+  "logs": []
+}

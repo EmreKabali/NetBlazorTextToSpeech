@@ -1,0 +1,81 @@
+﻿@page "/"
+@using Microsoft.Extensions.Options
+@using TextToSpeech.Shared
+@inject IOptions<AppOptions> appOptions
+
+<PageTitle>Home</PageTitle>
+
+
+<div class="col-md-12">
+    <div class="card">
+
+        <div class="card-header">
+            <h1>Welcome to Boo</h1>
+        </div>
+        <div class="card-body">
+            <div class="alert alert-success">Write your text after click convert</div>
+            <div class="form-group">
+                <label for="textInput" class="form-label">Your Input</label>
+                <textarea id="textInput" class="form-control" @bind="textInput" rows="6" placeholder="Enter your text here..."></textarea>
+            </div>
+            <button class="btn btn-primary mt-3" @onclick="ConvertSound">Convert</button>
+
+            @if (!string.IsNullOrEmpty(audioUrl))
+            {
+                <div class="mt-4">
+                    <audio controls>
+                        <source src="@audioUrl" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <div class="mt-2">
+                        <a href="@audioUrl" download="GeneratedAudio.mp3" class="btn btn-secondary">Download Audio</a>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+</div>
+
+
+@code {
+    private string textInput = "";
+    private string? audioUrl;
+
+    protected override Task OnInitializedAsync()
+    {
+        var option = appOptions.Value;
+        return base.OnInitializedAsync();
+    }
+    public async Task ConvertSound()
+    {
+
+        try
+        {
+            var openai = new OpenAI.OpenAIClient(appOptions.Value.Key);
+            var client = openai.GetAudioClient("tts-1");
+            var generatedResult = await client.GenerateSpeechAsync(text: textInput, voice: OpenAI.Audio.GeneratedSpeechVoice.Alloy);
+
+
+            if (generatedResult != null)
+            {
+                // Convert BinaryData to byte array using ToStream
+                using var stream = generatedResult.Value.ToStream();
+                using var memoryStream = new MemoryStream();
+                await stream.CopyToAsync(memoryStream);
+                byte[] audioBytes = memoryStream.ToArray();
+
+                audioUrl = $"data:audio/mpeg;base64,{Convert.ToBase64String(audioBytes)}";
+                StateHasChanged();
+            }
+        }
+        catch (Exception ex )
+        {
+            var error = ex;
+        }
+
+
+    }
+
+
+}
